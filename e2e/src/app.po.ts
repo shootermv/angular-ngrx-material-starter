@@ -14,11 +14,7 @@ export class AngularNgrxMaterialStarterPage {
   getAllMenus() {
     return element
       .all(by.css('mat-toolbar button.nav-button'))
-      .map(elm => {
-        return elm.getText();
-      })
-      .then(texts => {
-        return texts;
-      });
+      .map(elm => elm.getText())
+      .then(texts => texts);
   }
 }
